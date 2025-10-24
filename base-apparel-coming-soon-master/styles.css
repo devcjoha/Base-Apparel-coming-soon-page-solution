@@ -1,0 +1,221 @@
+:root {
+  /* Primary */
+  --pink-400: hsl(0, 36%, 70%);
+  --red-500: hsl(0, 93%, 68%);
+  --pink-400-lg: hsla(0, 36%, 70%, 0.555);
+  /* Gradients */
+  --linear-1: hsl(0, 0%, 100%);
+  --linear-2: hsl(0, 100%, 98%);
+  --linear-3: hsl(0, 80%, 86%);
+  --linear-4: hsl(0, 74%, 74%);
+
+  /* Neutral */
+  --gray-900: hsl(0, 6%, 24%);
+  --gray-200: hsl(0, 0%, 98%);
+
+  /* Typography */
+  --font-size: 1rem;
+  --font-primary: "Josefin Sans", sans-serif;
+  --font-weight300: 300;
+  --font-weight400: 400;
+  --font-weight600: 600;
+}
+body {
+  width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  inset: 0;
+}
+.sections-container {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: grid;
+  max-width: 100vw;
+  max-height: 100vh;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+/* Sections */
+.section-1,
+.section-2 {
+  margin: 0;
+  display: flex;
+}
+/* header */
+.header-logo {
+  grid-area: 1 / 1;
+  padding: 5rem 0 4rem 10rem;
+}
+/* ****Section 1**** */
+.section-1 {
+  grid-area: 1 / 1 / span 2 / auto;
+  background-image: url("./images/bg-pattern-desktop.svg"),
+    linear-gradient(to top left, var(--linear-2), var(--linear-1));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+}
+/* **Bloque de texto e input** */
+.text-input-container {
+  grid-area: 2 / 2 auto;
+  margin: 4rem 0 0 10rem;
+}
+.heading {
+  margin: 0 10rem 0 0;
+  font-size: 4.5rem;
+  font-weight: var(--font-weight400);
+  letter-spacing: 1rem;
+}
+.were-heading {
+  font-weight: var(--font-weight300);
+  color: var(--pink-400);
+}
+.hello-text {
+  width: 27rem;
+  line-height: 2rem;
+  font-size: 16px;
+  font-weight: var(--font-weight400);
+  color: var(--pink-400);
+}
+.input-container {
+  display: flex;
+  height: 3.5rem;
+  width: 27rem;
+  padding: 2rem 0 0 0;
+  color: var(--pink-400);
+  z-index: 0;
+  position: relative;
+}
+.input-email {
+  width: 100%;
+  padding-left: 2rem;
+  border: 1px solid var(--pink-400);
+  opacity: 0.5;
+  border-radius: 4rem;
+  background-color: transparent;
+  z-index: 1;
+}
+.input-email::placeholder {
+  color: var(--pink-400);
+  font-family: var(--font-primary);
+}
+.button-container {
+  z-index: 2;
+  margin-left: -6rem;
+  align-self: center;
+}
+.btn-sudmit {
+  background-image: linear-gradient(to left, var(--linear-4), var(--linear-3));
+  border: none;
+  cursor: pointer;
+  width: 6rem;
+  height: 3.5rem;
+  box-shadow: 0px 10px 30px 0px var(--pink-400-lg);
+  border-radius: 4rem;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  grid-area: 3 / 1 / auto / auto;
+  margin: 8rem 0 0 0;
+  font-size: .8rem;
+  color: var(--pink-400);
+}
+
+/* ****Section 2**** */
+.section-2 {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 45vw;
+  grid-area: 1 / 2 / span 2 / auto;
+}
+.img-desktop {
+  height: 100vh;
+  width: 100%;
+}
+.img-mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .sections-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+      to top left,
+      var(--linear-2),
+      var(--linear-1)
+    );
+  }
+  .section-1 {
+    background-image: none;
+    width: 375px;
+    max-height: fit-content;
+  }
+  .header-logo {
+    padding: 1.8rem 0 1.5rem 1.7rem;
+    margin: 0;
+  }
+  .header-logo img {
+    width: 6rem;
+  }
+  .section-2 {
+    display: none;
+  }
+
+  .img-mobile {
+    display: flex;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+  }
+  .text-input-container {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  .heading {
+    width: 100%;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+  }
+  .hello-text {
+    width: 100%;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .input-container {
+    padding: 1rem 0 0 0;
+    width: 100%;
+    height: 3rem;
+     
+  }
+  .input-email {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .button-container {
+    margin-left: -3rem;
+  }
+  .btn-sudmit {
+    width: 4rem;
+    height: 3rem;
+  }
+  .footer{
+    display: flex;
+    margin: 4rem 1rem 0 1rem;
+    font-size: .7rem;
+    justify-content: center;
+  }
+}
