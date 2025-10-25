@@ -33,7 +33,7 @@ Users should be able to:
 <p align="center">
   <img src="./images/Base-apparell-comming-soon-page-Desktop.jpg" width="600" alt="vista desktop" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./images/Base-apparell-comming-soon-page-mobile.jpg" width="300" alt="Vista mobile" />
+  <img src="./images/Base-apparell-comming-soon-page-Mobile.jpg" width="300" alt="Vista mobile" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./images/Base-apparell-comming-soon-page-active.jpg" width="300" alt="Vista active" />
 </p>
