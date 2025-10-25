@@ -30,7 +30,6 @@ body {
 }
 .sections-container {
   overflow: hidden;
-  box-sizing: border-box;
   display: grid;
   max-width: 100vw;
   max-height: 100vh;
@@ -40,6 +39,7 @@ body {
 /* Sections */
 .section-1,
 .section-2 {
+  box-sizing: border-box;
   margin: 0;
   display: flex;
 }
@@ -60,7 +60,7 @@ body {
 }
 /* **Bloque de texto e input** */
 .text-input-container {
-  grid-area: 2 / 2 auto;
+  grid-area: 2 / 3 auto;
   margin: 4rem 0 0 10rem;
 }
 .heading {
@@ -86,26 +86,34 @@ body {
   width: 27rem;
   padding: 2rem 0 0 0;
   color: var(--pink-400);
-  z-index: 0;
   position: relative;
 }
+.input-email:hover {
+  border: 2px solid var(--red-500);
+}
+.input-email:focus {
+  outline: none;
+  border: 2px solid var(--red-500);
+}
+
 .input-email {
-  width: 100%;
   padding-left: 2rem;
   border: 1px solid var(--pink-400);
+  flex-grow: 1;
   opacity: 0.5;
   border-radius: 4rem;
   background-color: transparent;
-  z-index: 1;
+  /* position: absolute; */
 }
 .input-email::placeholder {
   color: var(--pink-400);
   font-family: var(--font-primary);
+  opacity: 1;
 }
+
 .button-container {
-  z-index: 2;
-  margin-left: -6rem;
-  align-self: center;
+  position: absolute;
+  right: 6rem;
 }
 .btn-sudmit {
   background-image: linear-gradient(to left, var(--linear-4), var(--linear-3));
@@ -115,13 +123,34 @@ body {
   height: 3.5rem;
   box-shadow: 0px 10px 30px 0px var(--pink-400-lg);
   border-radius: 4rem;
+  position: absolute;
 }
-.footer{
+.btn-sudmit:hover {
+  background-image: linear-gradient(to left, var(--linear-3), var(--linear-2));
+  box-shadow: 0 10px 20px -5px var(--pink-400);
+}
+.hidden {
+  display: none;
+}
+.error-msg {
+  color: var(--red-500);
+  position: absolute;
+  margin: 0.8rem 0 0 0.5rem;
+}
+.error-icon {
+  right: 7rem;
+  position: absolute;
+  bottom: 1rem;
+}
+.error-state {
+  border: 2px solid red;
+}
+.footer {
   display: flex;
   justify-content: center;
   grid-area: 3 / 1 / auto / auto;
   margin: 8rem 0 0 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: var(--pink-400);
 }
 
@@ -199,23 +228,31 @@ body {
     padding: 1rem 0 0 0;
     width: 100%;
     height: 3rem;
-     
   }
   .input-email {
     width: 100%;
     box-sizing: border-box;
   }
   .button-container {
-    margin-left: -3rem;
+    right: 3rem;
   }
   .btn-sudmit {
     width: 4rem;
     height: 3rem;
   }
-  .footer{
+  .error-icon {
+    right: 4rem;
+    bottom: 0.8rem;
+  }
+  .error-msg {
+    font-size: 14px;
+    left: 0;
+    margin-left: 2.5rem;
+  }
+  .footer {
     display: flex;
     margin: 4rem 1rem 0 1rem;
-    font-size: .7rem;
+    font-size: 0.7rem;
     justify-content: center;
   }
 }
