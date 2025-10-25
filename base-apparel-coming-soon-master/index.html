@@ -38,14 +38,20 @@
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
-          <div class="input-container">
-          <input class="input-email" type="email" placeholder="Email Address" id="email" />
+        <form id="email-form" class="input-container" novalidate>
+          <input id="email-input" class="input-email" type="email" placeholder="Email Address"/>
+          <img id="error-icon" class="error-icon hidden" src="./images/icon-error.svg" alt="error-icon">
           <div class="button-container">
-          <button class="btn-sudmit">
-            <img src="./images/icon-arrow.svg" />
-          </button>
+            <button id="submit-btn" class="btn-sudmit" type="submit">
+              <img src="./images/icon-arrow.svg" />
+            </button>
           </div>  
-          </div>
+        </form>
+    
+        
+        <p id="error-msg" class="error-msg hidden" >Please provide a valid email!</p>
+
+        
         </div>
         <div class="footer">
          <p class="attribution">
@@ -67,8 +73,9 @@
             alt="desktop"
           />
       </section>
+
     </div >
   </div>
-      
+      <script src="main.js"></script>
   </body>
 </html>
