@@ -99,7 +99,7 @@ My future focus will be on improving accessibility (A11y), particularly in forms
 ## Author
 
 - Website - [Carla Johanna](https://github.com/devcjoha)
-- Frontend Mentor - [@devcjoha](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@devcjoha](https://www.frontendmentor.io/profile/devcjoha)
 - X - [@CarlitaJohanna](https://www.x.com/carlitajohana)
 
 
